@@ -12,60 +12,47 @@ runtime_options: {version: 2, server_version: python3-sandbox, client_version: '
 metadata: {}
 startup_form: Homepage
 db_schema:
-- name: categories
-  id: 58553
-  python_name: categories
-  columns:
-    MgVxYqFaDs8=:
-      name: name
+  articles:
+    title: articles
+    client: none
+    server: full
+    columns:
+    - name: title
+      admin_ui: {width: 200}
       type: string
-      admin_ui: {order: 0, width: 200}
-  access: {python_name: categories, app_id: AOYS4NM7A3XTUODP, server: full, client: search,
-    table_id: 58553}
-- name: articles
-  id: 58552
-  python_name: articles
-  columns:
-    37mzCX_Gjso=:
-      name: image
+    - name: content
+      admin_ui: {width: 200}
+      type: string
+    - name: image
+      admin_ui: {width: 200}
       type: media
-      admin_ui: {order: 2, width: 200}
-    GA8H_h_nFdA=:
-      name: updated
+    - name: created
+      admin_ui: {width: 200}
       type: datetime
-      admin_ui: {order: 4, width: 200}
-    RYXO5UvmKRU=:
-      name: title
-      type: string
-      admin_ui: {order: 0, width: 200}
-    iQLJekkVlUM=:
-      name: created
+    - name: updated
+      admin_ui: {width: 200}
       type: datetime
-      admin_ui: {order: 3, width: 200}
-    icjwId8C4Iw=:
-      name: category
-      type: liveObject
-      backend: anvil.tables.Row
-      admin_ui: {order: 5, width: 200}
-      table_id: 58553
-    mZJgzujS2K0=:
-      name: content
+    - name: category
+      admin_ui: {width: 200}
+      type: link_single
+      target: categories
+  categories:
+    title: categories
+    client: search
+    server: full
+    columns:
+    - name: name
+      admin_ui: {width: 200}
       type: string
-      admin_ui: {order: 1, width: 200}
-  access: {python_name: articles, app_id: AOYS4NM7A3XTUODP, server: full, client: none,
-    table_id: 58552}
-- name: Users
-  id: 61971
-  python_name: users
-  columns:
-    HfVpbN0Kido=:
-      name: enabled
+  users:
+    title: Users
+    client: none
+    server: full
+    columns:
+    - name: email
+      admin_ui: {width: 200}
+      type: string
+    - name: enabled
+      admin_ui: {width: 100}
       type: bool
-      admin_ui: {order: 1, width: 100}
-    isjau9QwnnA=:
-      name: email
-      type: string
-      admin_ui: {order: 0, width: 200}
-  access: {python_name: users, app_id: AOYS4NM7A3XTUODP, server: full, client: none,
-    table_id: 61971}
 renamed: true
