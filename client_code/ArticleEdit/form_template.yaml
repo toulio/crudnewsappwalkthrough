@@ -1,0 +1,75 @@
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{}'}
+components:
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: 'Title:
+
+      ', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+    italic: false, background: '', bold: false, underline: false, icon: ''}
+  name: label_1
+  layout_properties: {grid_position: 'NYHNMO,VNTQZO'}
+- type: TextBox
+  properties: {}
+  name: title_box
+  layout_properties: {grid_position: 'NYHNMO,ESWODU'}
+  data_bindings:
+  - {property: text, code: 'self.item[''title'']', writeback: true}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: 'Content:', font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
+  name: label_2
+  layout_properties: {grid_position: 'QPBUHU,JIJXCV'}
+- type: TextArea
+  properties: {height: 255}
+  name: content_box
+  layout_properties: {grid_position: 'QPBUHU,YNGQQS'}
+  data_bindings:
+  - {property: text, code: 'self.item[''content'']', writeback: true}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: 'Category:', font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
+  name: label_3
+  layout_properties: {grid_position: 'LILSIA,VHYERH'}
+- type: DropDown
+  properties:
+    role: null
+    align: full
+    tooltip: ''
+    placeholder: choose category
+    border: ''
+    enabled: true
+    foreground: ''
+    items: []
+    visible: true
+    font_size: null
+    font: ''
+    spacing_above: small
+    spacing_below: small
+    italic: false
+    background: ''
+    bold: false
+    underline: false
+    include_placeholder: true
+  name: category_box
+  layout_properties: {grid_position: 'LILSIA,WIFFSM'}
+  data_bindings:
+  - {property: selected_value, code: 'self.item[''category'']', writeback: true}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: 'Image:', font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
+  name: label_4
+  layout_properties: {grid_position: 'WGDQFH,RKHEHQ'}
+- type: FileLoader
+  properties: {}
+  name: image_uploader
+  layout_properties: {grid_position: 'WGDQFH,LIJUGR'}
+  event_bindings: {change: image_uploader_change}
+is_package: true

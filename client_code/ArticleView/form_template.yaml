@@ -1,0 +1,65 @@
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{}'}
+components:
+- type: ColumnPanel
+  properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: never, col_spacing: medium, spacing_above: small, col_widths: '{"RFJDUY":16,"JSETBS":36,"UGLGMG":40,"URYFFC":40,"JPNGAG":55}',
+    spacing_below: small, background: ''}
+  name: card_1
+  layout_properties: {grid_position: 'GYZCCJ,UHWKUF'}
+  components:
+  - type: Label
+    properties: {role: subheading, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
+      spacing_below: small, italic: false, background: '', bold: true, underline: false,
+      icon: ''}
+    name: title_label
+    layout_properties: {grid_position: 'YYARYO,UGLGMG'}
+    data_bindings:
+    - {property: text, code: 'self.item[''title'']'}
+  - type: Label
+    properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
+      visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
+      spacing_below: small, italic: false, background: '', bold: true, underline: false,
+      icon: ''}
+    name: category_label
+    layout_properties: {grid_position: 'YYARYO,URYFFC'}
+    data_bindings:
+    - {property: text, code: 'self.item[''category''][''name''] if self.item[''category'']
+        else ''None'''}
+  - type: FlowPanel
+    properties: {role: null, spacing: medium, align: right, tooltip: '', border: '',
+      foreground: '', visible: true, spacing_above: small, spacing_below: small, background: ''}
+    name: flow_panel_1
+    layout_properties: {grid_position: 'YYARYO,UQRFZI'}
+    components:
+    - type: Button
+      properties: {role: primary-color, align: right, tooltip: '', border: '', enabled: true,
+        foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: 'fa:pencil-square'}
+      name: edit_article_button
+      layout_properties: {grid_position: 'OIKTWM,BYGSGE'}
+      event_bindings: {click: edit_article_button_click}
+    - type: Button
+      properties: {role: secondary-color, align: right, tooltip: '', border: '', enabled: true,
+        foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: red, bold: false,
+        underline: false, icon: 'fa:trash'}
+      name: delete_article_button
+      layout_properties: {grid_position: 'AKCOOL,UVOCIO'}
+      event_bindings: {click: delete_article_button_click}
+  - type: Image
+    properties: {}
+    name: image_1
+    layout_properties: {grid_position: 'ENOMPB,RFJDUY'}
+    data_bindings:
+    - {property: source, code: 'self.item[''image'']'}
+  - type: Label
+    properties: {}
+    name: content_label
+    layout_properties: {grid_position: 'ENOMPB,JSETBS'}
+    data_bindings:
+    - {property: text, code: 'self.item[''content'']'}
+is_package: true

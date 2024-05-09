@@ -1,0 +1,12 @@
+unique_ids:
+  forms:
+    ArticleEdit: XSL4ECXPB4N7OKOXN6WIG4LOR6ZRX3G2
+    ArticleView: LOC7FKUG3QI662UESXMDCK27Q5BWRBNB
+    Homepage: LMFO5DNSLAHQKNPXEZFXGOIDSMGGKW5B
+  modules: {}
+  server_modules:
+    ServerModule1: GM3E6V2Y7GXDKVBZKUGSZZ7V7ERCPXQ7
+  assets:
+    standard-page.html: R6U5JG3AJQ24OZNIB3NQNZ5RXBD3JO74
+    theme.css: NFWGCOJZMKWMPGTRRO7BB53WS4N35UXM
+  scripts: {}
