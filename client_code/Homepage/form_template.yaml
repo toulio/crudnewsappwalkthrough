@@ -7,6 +7,10 @@ components:
   name: content_panel
   layout_properties: {slot: default}
   components:
+  - name: button_1
+    properties: {text: Test}
+    type: Button
+    layout_properties: {grid_position: 'YMTJBN,CHJKZY'}
   - type: Button
     properties: {role: primary-color, align: center, tooltip: '', border: '', enabled: true,
       foreground: '', visible: true, text: Add an article, font_size: null, font: '',
